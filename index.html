@@ -7,13 +7,11 @@
 <meta name="description" content="Rinoplastie estetică și funcțională în București, realizată de Dr. Alin Bortolini, chirurg plastician cu peste 15 ani experiență și 2000+ intervenții. Programează o consultație.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://beperfect.ro/rinoplastie">
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rinoplastie București | Dr. Alin Bortolini">
-<meta property="og:description" content="Rinoplastie estetică și funcțională realizată de Dr. Alin Bortolini. Peste 15 ani experiență, 2000+ intervenții.">
+<meta property="og:description" content="Rinoplastie estetică și funcțională. Peste 15 ani experiență, 2000+ intervenții.">
 <meta property="og:locale" content="ro_RO">
-<meta property="og:url" content="https://beperfect.ro/rinoplastie">
-<meta property="og:image" content="https://beperfect.ro/wp-content/uploads/og-rinoplastie.jpg">
+<meta property="og:image" content="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr.-Alin-Bortolini-Beperfect-2025-10-17-at-15.49.10.jpeg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,22 +19,13 @@
 
 <style>
   :root{
-    --gold:#c6a35d;
-    --gold-2:#d8bd84;
-    --gold-deep:#a8854a;
-    --black:#0c0c0d;
-    --black-2:#151517;
-    --cream:#f7f4ee;
-    --cream-2:#efe9df;
-    --ink:#22242a;
-    --muted:#6a6f78;
-    --line:#e6ddcf;
-    --line-dark:#2a2a2e;
-    --radius:8px;
+    --gold:#c6a35d;--gold-2:#d8bd84;--gold-deep:#a8854a;
+    --black:#0b0b0c;--black-2:#141416;--cream:#f7f4ee;--cream-2:#efe9df;
+    --ink:#22242a;--muted:#6a6f78;--line:#e6ddcf;--line-dark:#2a2a2e;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15}
   h2{font-size:clamp(2rem,4.4vw,3.1rem)}
   a{color:inherit;text-decoration:none}
@@ -49,144 +38,163 @@
   .lead{font-size:1.06rem;color:var(--muted);max-width:660px}
   .dark .lead{color:#b9bcc4}
   .btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#1a1408;padding:15px 30px;border-radius:4px;font-weight:500;font-size:.92rem;letter-spacing:.02em;transition:.25s;border:none;cursor:pointer;font-family:inherit}
-  .btn:hover{background:var(--gold-2);transform:translateY(-2px)}
+  .btn:hover{background:var(--gold-2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(198,163,93,.3)}
   .btn-out{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
-  .btn-out:hover{background:rgba(255,255,255,.08);border-color:var(--gold)}
-  .btn-dark{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-out:hover{background:rgba(255,255,255,.08);border-color:var(--gold);box-shadow:none}
+  .btn-wa{background:#25D366;color:#fff}
+  .btn-wa:hover{background:#1ebe5b;box-shadow:0 10px 30px rgba(37,211,102,.3)}
 
-  /* Header */
   header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.3s;border-bottom:1px solid transparent}
-  header.scrolled{background:rgba(12,12,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
+  header.scrolled{background:rgba(11,11,12,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
   .logo{display:flex;align-items:center;gap:12px;color:#fff}
-  .logo .mark{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:var(--gold);font-size:.7rem;letter-spacing:.04em;text-align:center;line-height:1}
+  .logo .mark{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:var(--gold);font-size:.62rem;letter-spacing:.04em;text-align:center;line-height:1.05}
   .logo b{font-family:'Playfair Display',serif;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
-  .nav-links{display:flex;gap:36px;align-items:center}
-  .nav-links a{font-size:.86rem;color:#e9e9ec;font-weight:400;letter-spacing:.04em}
-  .nav-links a:hover{color:var(--gold)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.86rem;color:#e9e9ec;font-weight:400;letter-spacing:.04em;position:relative}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.25s}
+  .nav-links a:not(.btn):hover::after{width:100%}
   .menu-btn{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
 
-  /* Hero */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:radial-gradient(1100px 700px at 78% 35%,rgba(198,163,93,.16),transparent 60%),linear-gradient(120deg,#0a0a0b 0%,#141416 48%,#1d1a16 100%);color:#fff;overflow:hidden}
-  .hero::after{content:"";position:absolute;right:-10%;top:0;bottom:0;width:62%;background:radial-gradient(closest-side at 60% 45%,rgba(198,163,93,.22),transparent 72%);pointer-events:none}
-  .hero-photo{position:absolute;right:0;top:0;bottom:0;width:54%;background:linear-gradient(90deg,#0c0c0d 0%,rgba(12,12,13,.2) 30%,transparent 60%),#26211a;display:flex;align-items:center;justify-content:flex-end;color:#5a503e;font-size:.82rem;text-align:right;padding:30px}
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#0b0b0c;color:#fff;overflow:hidden}
+  .hero-photo{position:absolute;right:0;top:0;bottom:0;width:50%;overflow:hidden}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0b0c 2%,rgba(11,11,12,.55) 35%,rgba(11,11,12,.15) 70%),radial-gradient(closest-side at 70% 40%,rgba(198,163,93,.18),transparent 75%)}
   .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:120px 26px 60px;width:100%}
-  .hero h1{font-size:clamp(3rem,7vw,5.2rem);font-weight:600;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5rem);font-weight:600;margin-bottom:22px}
   .hero h1 .br{display:block}
-  .hero .lead{margin-bottom:34px;font-size:1.12rem}
+  .hero .lead{margin-bottom:32px;font-size:1.12rem;color:#d8dade}
   .hero .lead .gold{font-weight:500}
-  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:42px}
-  .stats{display:flex;gap:0;align-items:center;flex-wrap:wrap}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+  .stats{display:flex;align-items:center;flex-wrap:wrap}
   .stats div{padding-right:26px;margin-right:26px;border-right:1px solid rgba(255,255,255,.18)}
   .stats div:last-child{border-right:none}
   .stats b{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.35rem;font-weight:600;margin-right:8px}
   .stats span{font-size:.9rem;color:#cfd1d6}
 
-  /* Light/dark sections */
-  .light{background:var(--cream)}
-  .light-2{background:var(--cream-2)}
+  .trust{background:#08080a;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+  .trust .wrap{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;align-items:center}
+  .trust .t{display:flex;align-items:center;gap:10px;color:#cdd0d6;font-size:.9rem}
+  .trust .t b{color:#fff;font-weight:500}
+  .trust .stars{color:var(--gold);letter-spacing:2px}
+  .trust .sep{width:1px;height:30px;background:var(--line-dark)}
+
+  .light{background:var(--cream)}.light-2{background:var(--cream-2)}
   .dark{background:var(--black);color:#ececed}
   .dark h2,.dark h3{color:#fff}
   .section-head{text-align:center;max-width:720px;margin:0 auto 56px}
-
   .two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-  .imgbox{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#e9e1d2,#e9e1d2 16px,#e2d8c5 16px,#e2d8c5 32px);display:flex;align-items:center;justify-content:center;color:#a4906a;font-size:.85rem;text-align:center;padding:18px;border:1px solid var(--line)}
-  .dark .imgbox{background:repeating-linear-gradient(45deg,#1c1c1f,#1c1c1f 16px,#222226 16px,#222226 32px);border-color:var(--line-dark);color:#6a6a70}
 
-  /* checklist */
+  .ph{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+  .ph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(198,163,93,.35);border-radius:10px;pointer-events:none}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+  .ph:hover img{transform:scale(1.04)}
+  .ph.r43{aspect-ratio:4/3}.ph.r34{aspect-ratio:3/4}.ph.r11{aspect-ratio:1/1}
+
   .clist{list-style:none;margin:18px 0}
   .clist li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-weight:400}
-  .clist li::before{content:"";flex:none;width:20px;height:20px;margin-top:4px;border-radius:50%;background:var(--gold);position:relative}
-  .clist li.no::before{background:#c0392b22;border:1.5px solid #c0392b}
-  .clist li .ck{flex:none;width:22px;color:var(--gold);font-weight:700;margin-top:1px}
-  .clist.plain li::before{display:none}
+  .clist li::before{content:"";flex:none;width:18px;height:18px;margin-top:5px;border-radius:50%;background:var(--gold)}
+  .clist li.no::before{background:transparent;border:1.5px solid #b15545}
+  .clist li .ck{flex:none;width:20px;color:var(--gold);font-weight:700;margin-top:1px}
+  .note{font-size:.92rem;color:var(--muted)}.dark .note{color:#9a9ca3}
+  h3.sub{font-size:1.15rem;margin:22px 0 6px;color:var(--gold-deep)}.dark h3.sub{color:var(--gold)}
 
-  .note{font-size:.92rem;color:var(--muted)}
-  .dark .note{color:#9a9ca3}
-  h3.sub{font-size:1.15rem;margin:22px 0 6px;color:var(--gold-deep)}
-  .dark h3.sub{color:var(--gold)}
-
-  /* cards 3 */
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .ucard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;border-top:3px solid var(--gold)}
+  .ucard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px;border-top:3px solid var(--gold);transition:.3s}
+  .ucard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(168,133,74,.16)}
   .dark .ucard{background:var(--black-2);border-color:var(--line-dark);border-top-color:var(--gold)}
   .ucard h3{font-size:1.2rem;margin-bottom:10px}
-  .ucard p{font-size:.93rem;color:var(--muted);font-weight:300}
-  .dark .ucard p{color:#a9abb2}
+  .ucard p{font-size:.93rem;color:var(--muted);font-weight:300}.dark .ucard p{color:#a9abb2}
   .badge-new{display:inline-block;background:var(--gold);color:#1a1408;font-size:.66rem;font-weight:600;letter-spacing:.1em;padding:3px 9px;border-radius:3px;margin-bottom:10px}
 
-  .banner{background:var(--black);color:#eee;border:1px solid var(--gold-deep);border-radius:var(--radius);padding:22px 28px;text-align:center;font-size:.96rem;margin-top:34px}
+  .banner{background:var(--black);color:#eee;border:1px solid var(--gold-deep);border-radius:10px;padding:22px 28px;text-align:center;font-size:.96rem;margin-top:34px}
   .banner b{color:var(--gold)}
 
-  /* spec boxes */
   .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px}
-  .spec{background:var(--black-2);border:1px solid var(--line-dark);border-radius:var(--radius);padding:20px;text-align:center}
+  .spec{background:var(--black-2);border:1px solid var(--line-dark);border-radius:10px;padding:20px;text-align:center}
   .spec small{display:block;color:#9a9ca3;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
   .spec b{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.5rem;font-weight:600}
 
-  /* timeline */
   .timeline{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px;font-size:.9rem}
   .timeline span{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:30px;color:var(--ink)}
   .timeline .arrow{color:var(--gold);border:none;background:none;padding:0 2px}
 
-  /* gallery */
-  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .ba{aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,#1a1a1d,#242129);border:1px solid var(--line-dark);position:relative;display:flex;align-items:flex-end}
-  .ba .tags{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:12px 14px;font-size:.7rem;letter-spacing:.1em;color:var(--gold)}
-  .ba .cap{width:100%;text-align:center;padding:12px;font-size:.78rem;color:#7d7f86;background:rgba(0,0,0,.3)}
+  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .case{background:var(--black-2);border:1px solid var(--line-dark);border-radius:12px;overflow:hidden;transition:.3s}
+  .case:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(0,0,0,.4)}
+  .case .pair{display:grid;grid-template-columns:1fr 1fr;position:relative}
+  .case .pair img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .case .pair .lab{position:absolute;top:12px;font-size:.66rem;letter-spacing:.14em;color:#fff;background:rgba(0,0,0,.55);padding:4px 10px;border-radius:20px}
+  .case .pair .lab.b{left:12px}.case .pair .lab.a{right:12px;color:var(--gold);background:rgba(0,0,0,.6)}
+  .case .pair::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(198,163,93,.5);z-index:2}
+  .case .cap{padding:14px 18px;font-size:.84rem;color:#a9abb2;display:flex;justify-content:space-between;align-items:center}
+  .case .cap b{color:#fff;font-weight:500}
 
-  /* price */
   .price-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:54px;align-items:center}
-  .price-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:40px;text-align:center;border-top:4px solid var(--gold)}
+  .price-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center;border-top:4px solid var(--gold)}
   .price-card .from{font-size:.85rem;color:var(--muted);letter-spacing:.04em}
   .price-card .amt{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:700;color:var(--ink);line-height:1.1;margin:4px 0}
   .price-card .amt small{font-size:1.1rem;color:var(--muted);font-weight:400}
   .price-card .rate{display:inline-block;background:#1d6b3a14;color:#1d6b3a;font-size:.74rem;font-weight:600;letter-spacing:.08em;padding:5px 12px;border-radius:20px;margin:14px 0 22px}
 
-  /* doctor */
   .doc{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
-  .doc .imgbox{aspect-ratio:3/4}
   .doc-quote{border-left:2px solid var(--gold);padding-left:20px;margin:20px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:#e6e6e8;line-height:1.5}
 
-  /* FAQ */
   .faq{max-width:820px;margin:0 auto}
   .faq details{border-bottom:1px solid var(--line);padding:4px 0}
   .faq summary{padding:20px 4px;cursor:pointer;font-weight:500;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:1.05rem;font-family:'Playfair Display',serif}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--gold-deep);font-size:1.5rem;flex:none}
+  .faq summary::after{content:"+";color:var(--gold-deep);font-size:1.5rem;flex:none;transition:.25s}
   .faq details[open] summary::after{content:"–"}
   .faq details p{padding:0 4px 22px;color:var(--muted);font-size:.96rem;font-weight:300}
 
-  /* contact / form */
   .contact{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
   .contact-list{list-style:none;margin-top:24px}
   .contact-list li{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line-dark);font-size:1rem}
   .contact-list .ic{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold-deep);display:flex;align-items:center;justify-content:center;color:var(--gold)}
   .contact-list small{display:block;color:#8c8e95;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
-  form{display:grid;gap:14px;background:var(--black-2);padding:34px;border-radius:12px;border:1px solid var(--line-dark)}
+  form{display:grid;gap:14px;background:var(--black-2);padding:34px;border-radius:14px;border:1px solid var(--line-dark)}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   form label{font-size:.78rem;color:#9a9ca3;letter-spacing:.04em;margin-bottom:-8px}
-  form input,form select,form textarea{padding:13px 15px;border-radius:6px;border:1px solid #34343a;background:#0f0f11;color:#fff;font-family:inherit;font-size:.95rem;font-weight:300}
+  form input,form select,form textarea{padding:13px 15px;border-radius:8px;border:1px solid #34343a;background:#0f0f11;color:#fff;font-family:inherit;font-size:.95rem;font-weight:300;width:100%}
   form input::placeholder,form textarea::placeholder{color:#6a6c73}
   form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--gold)}
   .consent{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:#9a9ca3}
   .consent input{flex:none;width:auto;margin-top:4px}
+  .gdpr{display:flex;gap:8px;align-items:center;font-size:.76rem;color:#8c8e95}
   .form-msg{display:none;font-size:.9rem;color:var(--gold);padding-top:6px}
 
-  /* footer */
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(11,11,12,.96);backdrop-filter:blur(8px);border-top:1px solid var(--gold-deep);transform:translateY(110%);transition:.35s;padding:12px 0}
+  .sticky-cta.show{transform:translateY(0)}
+  .sticky-cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .sticky-cta .txt{color:#fff;font-size:.95rem}
+  .sticky-cta .txt b{color:var(--gold);font-family:'Playfair Display',serif}
+  .sticky-cta .acts{display:flex;gap:10px}
+  .wa-float{position:fixed;right:22px;bottom:90px;z-index:65;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);font-size:1.6rem;transition:.25s}
+  .wa-float:hover{transform:scale(1.08)}
+
   footer{background:#070708;color:#7e818a;padding:46px 0 30px;font-size:.88rem}
   .fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   footer a:hover{color:var(--gold)}
 
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
   @media(max-width:920px){
     .two,.price-wrap,.doc,.contact{grid-template-columns:1fr;gap:34px}
     .grid3,.specs{grid-template-columns:1fr}
-    .gal{grid-template-columns:1fr 1fr}
-    .hero-photo{width:100%;opacity:.28}
+    .gal{grid-template-columns:1fr}
+    .hero-photo{width:100%;opacity:.45}
+    .hero-photo::after{background:linear-gradient(180deg,rgba(11,11,12,.55),rgba(11,11,12,.85))}
     .nav-links{display:none}
     .nav-links.open{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;background:var(--black);padding:22px 26px;gap:18px;border-bottom:1px solid var(--line-dark)}
     .menu-btn{display:block}
     .section{padding:64px 0}
     .stats div{margin-bottom:10px}
+    .frow{grid-template-columns:1fr}
+    .trust .wrap{gap:22px}.trust .sep{display:none}
+    .sticky-cta .txt{display:none}.sticky-cta .wrap{justify-content:center}
+    .wa-float{bottom:84px}
   }
 </style>
 </head>
@@ -194,7 +202,7 @@
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#" class="logo"><span class="mark">DR.<br>B</span><b>Dr. Bortolini</b></a>
+    <a href="#" class="logo"><span class="mark">DR.<br>BORTOLINI</span><b>Dr. Bortolini</b></a>
     <nav class="nav-links" id="navLinks">
       <a href="#despre">Despre</a>
       <a href="#procedura">Procedura</a>
@@ -206,9 +214,10 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-photo"><span>[Fotografie hero — model / pacient, calitate înaltă]</span></div>
+  <div class="hero-photo">
+    <img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_4724-1024x1024-1.jpg" referrerpolicy="no-referrer" alt="Rinoplastie Dr. Alin Bortolini">
+  </div>
   <div class="hero-inner">
     <span class="eyebrow">Chirurgie plastică de elită</span>
     <h1>Rinoplastie <span class="br gold">București</span></h1>
@@ -225,10 +234,19 @@
   </div>
 </section>
 
-<!-- DE CE -->
+<div class="trust">
+  <div class="wrap">
+    <div class="t"><span class="stars">★★★★★</span><span><b>4,8</b> pe Google · 296 recenzii</span></div>
+    <div class="sep"></div>
+    <div class="t"><span>Membru <b>ISAPS · ASPS · The Aesthetic Society</b></span></div>
+    <div class="sep"></div>
+    <div class="t"><span><b>2000+</b> intervenții realizate</span></div>
+  </div>
+</div>
+
 <section class="section light" id="despre">
   <div class="wrap two">
-    <div>
+    <div class="reveal">
       <span class="eyebrow">De ce rinoplastie?</span>
       <h2>Transformă-ți aspectul și încrederea</h2>
       <p class="lead" style="margin:16px 0">Persoanele aleg rinoplastia pentru a aduce armonie trăsăturilor faciale și pentru a îmbunătăți proporțiile nasului în raport cu restul feței.</p>
@@ -241,45 +259,30 @@
       </ul>
       <p class="note"><b style="color:var(--ink)">Vârsta minimă:</b> dacă ai peste 16-18 ani și te confrunți cu nesiguranțe legate de aspectul nasului, poți fi candidat pentru rinoplastie.</p>
     </div>
-    <div class="imgbox">[Imagine: armonie facială / înainte-după]</div>
+    <div class="ph r43 reveal"><img src="https://beperfect.ro/wp-content/uploads/2022/11/Rinoplastie-1024x691.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Armonie facială rinoplastie"></div>
   </div>
 </section>
 
-<!-- PREGATIRE -->
 <section class="section light-2">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Pregătirea</span>
       <h2>Înainte de rinoplastie</h2>
     </div>
     <div class="grid3">
-      <div class="ucard">
-        <h3>Consultația inițială</h3>
-        <p>Discutăm în detaliu despre procedură, riscuri, limitări și impactul pe care îl poate avea asupra vieții tale.</p>
-      </div>
-      <div class="ucard">
-        <span class="badge-new">NOU</span>
-        <h3>Simulare digitală 3D</h3>
-        <p>Oferim simulare digitală pentru a vizualiza împreună posibilele rezultate și a alege aspectul dorit.</p>
-      </div>
-      <div class="ucard">
-        <h3>Evaluare medicală</h3>
-        <p>Analize de sânge, radiografii ale piramidei nazale sau tomografii computerizate, pentru siguranță maximă.</p>
-      </div>
+      <div class="ucard reveal"><h3>Consultația inițială</h3><p>Discutăm în detaliu despre procedură, riscuri, limitări și impactul pe care îl poate avea asupra vieții tale.</p></div>
+      <div class="ucard reveal"><span class="badge-new">NOU</span><h3>Simulare digitală 3D</h3><p>Oferim simulare digitală pentru a vizualiza împreună posibilele rezultate și a alege aspectul dorit.</p></div>
+      <div class="ucard reveal"><h3>Evaluare medicală</h3><p>Analize de sânge, radiografii ale piramidei nazale sau tomografii computerizate, pentru siguranță maximă.</p></div>
     </div>
-    <div class="banner"><b>Precauție:</b> dacă folosești anticoncepționale, oprește-le cu 4-6 săptămâni înainte pentru a reduce riscul de tromboembolii.</div>
+    <div class="banner reveal"><b>Precauție:</b> dacă folosești anticoncepționale, oprește-le cu 4-6 săptămâni înainte pentru a reduce riscul de tromboembolii.</div>
   </div>
 </section>
 
-<!-- INTERVENTIA -->
 <section class="section dark" id="procedura">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Intervenția</span>
-      <h2>Operația de rinoplastie</h2>
-    </div>
+    <div class="section-head reveal"><span class="eyebrow">Intervenția</span><h2>Operația de rinoplastie</h2></div>
     <div class="two">
-      <div>
+      <div class="reveal">
         <div class="specs">
           <div class="spec"><small>Anestezie</small><b>Generală</b></div>
           <div class="spec"><small>Durata</small><b>2-5 ore</b></div>
@@ -296,22 +299,18 @@
         <h3 class="sub">Corectarea deviației de sept</h3>
         <p class="note">Dacă prezinți deviație de sept, aceasta va fi îndreptată pentru o respirație optimă.</p>
       </div>
-      <div>
-        <div class="imgbox">[Schemă: reducere dorsum nazal / tehnică operatorie]</div>
+      <div class="reveal">
+        <div class="ph r43"><img src="https://beperfect.ro/wp-content/uploads/2022/11/operatie-deviatie-de-sept.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Tehnică rinoplastie, reducere dorsum nazal"></div>
         <div class="banner" style="text-align:left;margin-top:20px"><b>Alternativă, rinocorecția cu acid hialuronic:</b> o variantă minim invazivă pentru ajustări estetice, fără incizii și fără timp de recuperare îndelungat.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RECUPERARE -->
 <section class="section light">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Recuperarea</span>
-      <h2>După operația de rinoplastie</h2>
-    </div>
-    <div class="two" style="align-items:flex-start">
+    <div class="section-head reveal"><span class="eyebrow">Recuperarea</span><h2>După operația de rinoplastie</h2></div>
+    <div class="two reveal" style="align-items:flex-start">
       <div>
         <h3 class="sub">Recuperare postoperatorie</h3>
         <ul class="clist">
@@ -332,48 +331,38 @@
         </ul>
       </div>
     </div>
-    <h3 class="sub" style="margin-top:30px">Controale programate</h3>
-    <div class="timeline">
-      <span>2-3 zile</span><span class="arrow">→</span>
-      <span>2 săpt. (fire)</span><span class="arrow">→</span>
-      <span>3 luni</span><span class="arrow">→</span>
-      <span>6 luni</span><span class="arrow">→</span>
-      <span>12 luni</span>
+    <h3 class="sub reveal" style="margin-top:30px">Controale programate</h3>
+    <div class="timeline reveal">
+      <span>2-3 zile</span><span class="arrow">→</span><span>2 săpt. (fire)</span><span class="arrow">→</span><span>3 luni</span><span class="arrow">→</span><span>6 luni</span><span class="arrow">→</span><span>12 luni</span>
     </div>
   </div>
 </section>
 
-<!-- GALERIE -->
 <section class="section dark" id="galerie">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Rezultate reale</span>
-      <h2>Galerie înainte și după</h2>
-      <p class="lead" style="margin:14px auto 0">Adaugă aici fotografiile reale înainte/după, doar cu acordul scris al pacienților (GDPR).</p>
-    </div>
+    <div class="section-head reveal"><span class="eyebrow">Rezultate reale</span><h2>Galerie înainte și după</h2><p class="lead" style="margin:14px auto 0">Cazuri reale de rinoplastie realizate de Dr. Alin Bortolini.</p></div>
     <div class="gal">
-      <div class="ba"><div class="tags"><span>ÎNAINTE</span><span>DUPĂ</span></div><div class="cap">Caz 1</div></div>
-      <div class="ba"><div class="tags"><span>ÎNAINTE</span><span>DUPĂ</span></div><div class="cap">Caz 2</div></div>
-      <div class="ba"><div class="tags"><span>ÎNAINTE</span><span>DUPĂ</span></div><div class="cap">Caz 3</div></div>
-      <div class="ba"><div class="tags"><span>ÎNAINTE</span><span>DUPĂ</span></div><div class="cap">Caz 4</div></div>
+      <div class="case reveal"><div class="pair"><span class="lab b">ÎNAINTE</span><img src="https://beperfect.ro/wp-content/uploads/2022/11/IMG_1980-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Înainte rinoplastie"><img src="https://beperfect.ro/wp-content/uploads/2022/11/IMG_2702-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="După rinoplastie"><span class="lab a">DUPĂ</span></div><div class="cap"><b>Rinoplastie estetică</b><span>profil</span></div></div>
+      <div class="case reveal"><div class="pair"><span class="lab b">ÎNAINTE</span><img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_4184-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Înainte rinoplastie"><img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_5292-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="După rinoplastie"><span class="lab a">DUPĂ</span></div><div class="cap"><b>Reducere cocoașă</b><span>profil</span></div></div>
+      <div class="case reveal"><div class="pair"><span class="lab b">ÎNAINTE</span><img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_3404-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Înainte rinoplastie"><img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_3642-1-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="După rinoplastie"><span class="lab a">DUPĂ</span></div><div class="cap"><b>Rinoplastie funcțională</b><span>profil</span></div></div>
+      <div class="case reveal"><div class="pair"><span class="lab b">ÎNAINTE</span><img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_4724-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Înainte rinoplastie"><img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_5395-1024x1024-1.jpg" referrerpolicy="no-referrer" loading="lazy" alt="După rinoplastie"><span class="lab a">DUPĂ</span></div><div class="cap"><b>Remodelare vârf nazal</b><span>profil</span></div></div>
     </div>
-    <div style="text-align:center;margin-top:36px"><a href="#programare" class="btn btn-out">Vezi mai multe cazuri</a></div>
+    <div style="text-align:center;margin-top:36px" class="reveal"><a href="#programare" class="btn btn-out">Programează o consultație</a></div>
   </div>
 </section>
 
-<!-- PRET -->
 <section class="section light-2" id="pret">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Investiția ta</span><h2>Cât costă rinoplastia?</h2></div>
+    <div class="section-head reveal"><span class="eyebrow">Investiția ta</span><h2>Cât costă rinoplastia?</h2></div>
     <div class="price-wrap">
-      <div class="price-card">
+      <div class="price-card reveal">
         <div class="from">de la</div>
         <div class="amt">30.600 <small>RON</small></div>
         <div class="rate">NOU · Plată și în rate</div>
         <div><a href="#programare" class="btn" style="width:100%;justify-content:center">Programează consultația</a></div>
-        <p class="note" style="margin-top:14px">Pentru preț exact, programează-te la consultație.</p>
+        <p class="note" style="margin-top:14px">Costul final se stabilește la consultație, în funcție de complexitatea cazului. Fără costuri ascunse.</p>
       </div>
-      <div>
+      <div class="reveal">
         <h3 class="sub">Prețul include</h3>
         <ul class="clist">
           <li>Anestezia generală</li>
@@ -388,11 +377,10 @@
   </div>
 </section>
 
-<!-- DOCTOR -->
 <section class="section dark">
   <div class="wrap doc">
-    <div class="imgbox">[Fotografie Dr. Alin Bortolini]</div>
-    <div>
+    <div class="ph r34 reveal"><img src="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr.-Alin-Bortolini-Beperfect-2025-10-17-at-15.49.10.jpeg" referrerpolicy="no-referrer" loading="lazy" alt="Dr. Alin Bortolini"></div>
+    <div class="reveal">
       <span class="eyebrow">Chirurgul tău</span>
       <h2>Dr. Bortolini Alin</h2>
       <p class="lead" style="margin:8px 0 0;color:var(--gold)">Medic specialist chirurgie plastică și estetică</p>
@@ -408,11 +396,10 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section light" id="faq">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Întrebări frecvente</span><h2>FAQ</h2></div>
-    <div class="faq">
+    <div class="section-head reveal"><span class="eyebrow">Întrebări frecvente</span><h2>FAQ</h2></div>
+    <div class="faq reveal">
       <details open><summary>Cât durează recuperarea după rinoplastie?</summary><p>Vânătăile și umflăturile se reduc în aproximativ 2 săptămâni, atela și firele se scot la 10-12 zile, iar forma finală se stabilizează treptat în 6-12 luni.</p></details>
       <details><summary>Este rinoplastia dureroasă?</summary><p>Disconfortul postoperator este de obicei minim și gestionabil cu analgezice. Cele mai multe persoane revin la activități ușoare după 10-12 zile.</p></details>
       <details><summary>Care este vârsta minimă pentru rinoplastie?</summary><p>În general, peste 16-18 ani, când structura nasului este suficient dezvoltată. Eligibilitatea se stabilește la consultație.</p></details>
@@ -423,35 +410,46 @@
   </div>
 </section>
 
-<!-- PROGRAMARE -->
 <section class="section dark" id="programare">
   <div class="wrap contact">
-    <div>
+    <div class="reveal">
       <span class="eyebrow">Programări</span>
       <h2>Programează consultația</h2>
       <p class="lead" style="margin-top:14px">Completează formularul sau contactează-ne direct. Consultația este primul pas pentru un plan personalizat.</p>
       <ul class="contact-list">
         <li><span class="ic">☎</span><div><small>Telefon / WhatsApp</small><a href="tel:0767373328">0767 373 328</a></div></li>
         <li><span class="ic">✉</span><div><small>Email</small><a href="mailto:drbortolini@beperfect.ro">drbortolini@beperfect.ro</a></div></li>
-        <li><span class="ic">⌖</span><div><small>Adresă</small>Str. Teodosie Rudeanu 12-14, București</div></li>
+        <li><span class="ic">⌖</span><div><small>Adresă</small>Str. Teodosie Rudeanu 12-14, Icon Residence, sector 1, București</div></li>
       </ul>
       <p class="note" style="margin-top:18px">Clinica își rezervă dreptul de a selecta pacienții.</p>
     </div>
-    <form id="bookForm" onsubmit="return handleSubmit(event)">
+    <form id="bookForm" onsubmit="return handleSubmit(event)" class="reveal">
       <div><label for="nume">Nume și prenume</label><input id="nume" name="nume" placeholder="Numele tău" required></div>
-      <div><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" placeholder="07xx xxx xxx" required></div>
-      <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="email@exemplu.ro" required></div>
-      <div><label for="tip">Tip consultație</label>
-        <select id="tip" name="tip">
-          <option>Rinoplastie estetică</option>
-          <option>Rinoplastie funcțională / sept deviat</option>
-          <option>Septorinoplastie</option>
-          <option>Rinocorecție cu acid hialuronic</option>
-          <option>Nu sunt sigur(ă), vreau o evaluare</option>
-        </select></div>
-      <div><label for="mesaj">Mesaj (opțional)</label><textarea id="mesaj" name="mesaj" rows="3" placeholder="Spune-ne pe scurt ce îți dorești"></textarea></div>
-      <label class="consent"><input type="checkbox" required> Sunt de acord cu prelucrarea datelor conform <a href="#" class="gold">politicii de confidențialitate</a>.</label>
-      <button type="submit" class="btn">Trimite solicitarea</button>
+      <div class="frow">
+        <div><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" placeholder="07xx xxx xxx" required></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="email@exemplu.ro" required></div>
+      </div>
+      <div class="frow">
+        <div><label for="tip">Tip consultație</label>
+          <select id="tip" name="tip">
+            <option>Rinoplastie estetică</option>
+            <option>Rinoplastie funcțională / sept deviat</option>
+            <option>Septorinoplastie</option>
+            <option>Rinocorecție cu acid hialuronic</option>
+            <option>Nu sunt sigur(ă), vreau o evaluare</option>
+          </select></div>
+        <div><label for="interval">Preferință interval</label>
+          <select id="interval" name="interval">
+            <option>Dimineața</option><option>După-amiaza</option><option>Seara</option><option>Weekend</option>
+          </select></div>
+      </div>
+      <div><label for="mesaj">Întrebări / așteptări (opțional)</label><textarea id="mesaj" name="mesaj" rows="3" placeholder="Spune-ne pe scurt ce îți dorești"></textarea></div>
+      <label class="consent"><input type="checkbox" required> Sunt de acord cu prelucrarea datelor conform <a href="#" class="gold">politicii de confidențialitate</a> (GDPR).</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button type="submit" class="btn">Trimite solicitarea</button>
+        <a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
+      </div>
+      <div class="gdpr">🔒 Datele tale sunt confidențiale, folosite exclusiv pentru programare. Fără spam.</div>
       <p class="form-msg" id="formMsg">Mulțumim. Solicitarea a fost pregătită, te contactăm în cel mai scurt timp.</p>
     </form>
   </div>
@@ -464,35 +462,47 @@
   </div>
 </footer>
 
-<!-- SCHEMA JSON-LD -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="wrap">
+    <div class="txt"><b>Dr. Alin Bortolini</b> · Rinoplastie București · de la 30.600 RON</div>
+    <div class="acts">
+      <a href="#programare" class="btn">Programează consultația</a>
+      <a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
+    </div>
+  </div>
+</div>
+<a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">✆</a>
+
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {"@type":"MedicalWebPage","@id":"https://beperfect.ro/rinoplastie#webpage","url":"https://beperfect.ro/rinoplastie","name":"Rinoplastie București | Dr. Alin Bortolini","inLanguage":"ro-RO","description":"Rinoplastie estetică și funcțională realizată de Dr. Alin Bortolini.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lead"]}},
-    {"@type":"MedicalProcedure","@id":"https://beperfect.ro/rinoplastie#procedura","name":"Rinoplastie","procedureType":"https://schema.org/SurgicalProcedure","bodyLocation":"Nas","howPerformed":"Rinoplastie deschisă cu incizie de 3 mm în columelă, corecție estetică și funcțională, grefe de cartilaj.","followup":"Controale postoperatorii la 2-3 zile, 2 săptămâni, 3, 6 și 12 luni."},
-    {"@type":"Physician","@id":"https://beperfect.ro/#medic","name":"Dr. Alin Bortolini","medicalSpecialty":"PlasticSurgery","url":"https://beperfect.ro","telephone":"+40767373328","email":"drbortolini@beperfect.ro","knowsAbout":["Rinoplastie","Septorinoplastie","Rinocorecție cu acid hialuronic","Chirurgie estetică facială"],"address":{"@type":"PostalAddress","streetAddress":"Str. Teodosie Rudeanu 12-14","addressLocality":"București","addressCountry":"RO"}},
-    {"@type":"FAQPage","@id":"https://beperfect.ro/rinoplastie#faq","mainEntity":[
-      {"@type":"Question","name":"Cât durează recuperarea după rinoplastie?","acceptedAnswer":{"@type":"Answer","text":"Vânătăile și umflăturile se reduc în aproximativ 2 săptămâni, firele se scot la 10-12 zile, iar forma finală se stabilizează în 6-12 luni."}},
-      {"@type":"Question","name":"Este rinoplastia dureroasă?","acceptedAnswer":{"@type":"Answer","text":"Disconfortul postoperator este minim și gestionabil cu analgezice."}},
-      {"@type":"Question","name":"Care este vârsta minimă pentru rinoplastie?","acceptedAnswer":{"@type":"Answer","text":"În general peste 16-18 ani, cu evaluare la consultație."}},
-      {"@type":"Question","name":"Rezultatele sunt permanente?","acceptedAnswer":{"@type":"Answer","text":"Da, rezultatele sunt de durată, forma finală definitivându-se în 6-12 luni."}},
-      {"@type":"Question","name":"Ce alternative există la rinoplastie?","acceptedAnswer":{"@type":"Answer","text":"Rinocorecția cu acid hialuronic, o variantă minim invazivă pentru ajustări estetice."}},
-      {"@type":"Question","name":"Rinoplastia este potrivită pentru bărbați?","acceptedAnswer":{"@type":"Answer","text":"Da, cu un plan adaptat pentru păstrarea trăsăturilor masculine și un rezultat natural."}}
-    ]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","@id":"https://beperfect.ro/rinoplastie#webpage","url":"https://beperfect.ro/rinoplastie","name":"Rinoplastie București | Dr. Alin Bortolini","inLanguage":"ro-RO","description":"Rinoplastie estetică și funcțională realizată de Dr. Alin Bortolini.","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lead"]}},
+{"@type":"MedicalProcedure","@id":"https://beperfect.ro/rinoplastie#procedura","name":"Rinoplastie","procedureType":"https://schema.org/SurgicalProcedure","bodyLocation":"Nas","howPerformed":"Rinoplastie deschisă cu incizie de 3 mm în columelă, corecție estetică și funcțională, grefe de cartilaj.","followup":"Controale postoperatorii la 2-3 zile, 2 săptămâni, 3, 6 și 12 luni."},
+{"@type":"Physician","@id":"https://beperfect.ro/#medic","name":"Dr. Alin Bortolini","medicalSpecialty":"PlasticSurgery","url":"https://beperfect.ro","telephone":"+40767373328","email":"drbortolini@beperfect.ro","image":"https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr.-Alin-Bortolini-Beperfect-2025-10-17-at-15.49.10.jpeg","knowsAbout":["Rinoplastie","Septorinoplastie","Rinocorecție cu acid hialuronic","Chirurgie estetică facială"],"address":{"@type":"PostalAddress","streetAddress":"Str. Teodosie Rudeanu 12-14, Icon Residence","addressLocality":"București","addressCountry":"RO"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"296"}},
+{"@type":"FAQPage","@id":"https://beperfect.ro/rinoplastie#faq","mainEntity":[
+{"@type":"Question","name":"Cât durează recuperarea după rinoplastie?","acceptedAnswer":{"@type":"Answer","text":"Vânătăile și umflăturile se reduc în aproximativ 2 săptămâni, firele se scot la 10-12 zile, iar forma finală se stabilizează în 6-12 luni."}},
+{"@type":"Question","name":"Este rinoplastia dureroasă?","acceptedAnswer":{"@type":"Answer","text":"Disconfortul postoperator este minim și gestionabil cu analgezice."}},
+{"@type":"Question","name":"Care este vârsta minimă pentru rinoplastie?","acceptedAnswer":{"@type":"Answer","text":"În general peste 16-18 ani, cu evaluare la consultație."}},
+{"@type":"Question","name":"Rezultatele sunt permanente?","acceptedAnswer":{"@type":"Answer","text":"Da, rezultatele sunt de durată, forma finală definitivându-se în 6-12 luni."}},
+{"@type":"Question","name":"Ce alternative există la rinoplastie?","acceptedAnswer":{"@type":"Answer","text":"Rinocorecția cu acid hialuronic, o variantă minim invazivă pentru ajustări estetice."}},
+{"@type":"Question","name":"Rinoplastia este potrivită pentru bărbați?","acceptedAnswer":{"@type":"Answer","text":"Da, cu un plan adaptat pentru păstrarea trăsăturilor masculine și un rezultat natural."}}
+]}]}
 </script>
 
 <script>
   document.getElementById('year').textContent=new Date().getFullYear();
-  var hdr=document.getElementById('hdr');
-  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>40)});
+  var hdr=document.getElementById('hdr'), sticky=document.getElementById('stickyCta');
+  window.addEventListener('scroll',function(){
+    hdr.classList.toggle('scrolled',window.scrollY>40);
+    sticky.classList.toggle('show',window.scrollY>700);
+  });
   document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
   document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+  document.querySelectorAll('.faq details').forEach(d=>d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.faq details').forEach(o=>{if(o!==d)o.open=false});}));
+  var io=new IntersectionObserver(function(es){es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   function handleSubmit(e){
     e.preventDefault();var f=e.target;
-    var corp="Nume: "+f.nume.value+"%0D%0ATelefon: "+f.tel.value+"%0D%0AEmail: "+f.email.value+"%0D%0ATip: "+f.tip.value+"%0D%0AMesaj: "+f.mesaj.value;
+    var corp="Nume: "+f.nume.value+"%0D%0ATelefon: "+f.tel.value+"%0D%0AEmail: "+f.email.value+"%0D%0ATip: "+f.tip.value+"%0D%0AInterval: "+f.interval.value+"%0D%0AMesaj: "+f.mesaj.value;
     document.getElementById('formMsg').style.display='block';
     window.location.href="mailto:drbortolini@beperfect.ro?subject=Programare%20rinoplastie&body="+corp;
     return false;

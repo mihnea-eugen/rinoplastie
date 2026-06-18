@@ -48,8 +48,8 @@
   header.scrolled{background:rgba(11,11,12,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
   .logo{display:flex;align-items:center;gap:12px;color:#fff}
-  .logo .mark{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:var(--gold);font-size:.62rem;letter-spacing:.04em;text-align:center;line-height:1.05}
-  .logo b{font-family:'Playfair Display',serif;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
+  .logo-img{height:52px;width:auto;display:block}
+  .logo b{font-family:'Playfair Display',serif;font-weight:600;font-size:1.05rem;letter-spacing:.02em;color:#fff}
   .nav-links{display:flex;gap:34px;align-items:center}
   .nav-links a{font-size:.86rem;color:#e9e9ec;font-weight:400;letter-spacing:.04em;position:relative}
   .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.25s}
@@ -179,6 +179,8 @@
   form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--gold)}
   .consent{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:#9a9ca3}
   .consent input{flex:none;width:auto;margin-top:4px}
+  .consent span{flex:1;line-height:1.55}
+  .d-short{display:none}
   .gdpr{display:flex;gap:8px;align-items:center;font-size:.76rem;color:#8c8e95}
   .form-msg{display:none;font-size:.9rem;color:var(--gold);padding-top:6px}
 
@@ -202,8 +204,11 @@
     .two,.price-wrap,.doc,.contact{grid-template-columns:1fr;gap:34px}
     .grid3,.specs{grid-template-columns:1fr}
     .gal{grid-template-columns:1fr}
-    .hero-photo{width:100%;opacity:.45}
-    .hero-photo::after{background:linear-gradient(180deg,rgba(11,11,12,.55),rgba(11,11,12,.85))}
+    .hero-photo{width:100%;opacity:1}
+    .hero-photo img{object-position:center 12%}
+    .hero-photo::after{background:linear-gradient(180deg,rgba(11,11,12,.25) 0%,rgba(11,11,12,.45) 38%,rgba(11,11,12,.82) 72%,rgba(11,11,12,.95) 100%)}
+    .hero h1,.hero .lead{text-shadow:0 2px 16px rgba(0,0,0,.65)}
+    .logo-img{height:42px}
     .nav-links{display:none}
     .nav-links.open{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;background:var(--black);padding:22px 26px;gap:18px;border-bottom:1px solid var(--line-dark)}
     .menu-btn{display:block}
@@ -211,9 +216,11 @@
     .stats div{margin-bottom:10px}
     .frow{grid-template-columns:1fr}
     .trust .wrap{gap:22px}.trust .sep{display:none}
-    .sticky-cta .txt{display:none}.sticky-cta .wrap{justify-content:center}
-    .sticky-cta .acts{width:100%}.sticky-cta .acts .btn{flex:1;justify-content:center;padding:13px 14px;font-size:.85rem}
-    .wa-float{bottom:84px;width:50px;height:50px}
+    .sticky-cta{padding:10px 0}
+    .sticky-cta .txt{display:none}.sticky-cta .wrap{justify-content:center;gap:10px}
+    .sticky-cta .acts{width:100%;gap:10px}.sticky-cta .acts .btn{flex:1;justify-content:center;padding:14px 10px;font-size:.86rem;white-space:nowrap}
+    .wa-float{display:none}
+    .d-full{display:none}.d-short{display:inline}
     .rec-grid{grid-template-columns:1fr;margin-bottom:34px}
     .rec-card{padding:26px}
     .rec-tl-wrap{padding:26px 18px}
@@ -236,7 +243,7 @@
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#" class="logo"><span class="mark">DR.<br>BORTOLINI</span><b>Dr. Bortolini</b></a>
+    <a href="#" class="logo"><img class="logo-img" src="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr-Bortolini-Logo-ai-3.svg" referrerpolicy="no-referrer" alt="Dr. Bortolini"><b>Dr. Bortolini</b></a>
     <nav class="nav-links" id="navLinks">
       <a href="#despre">Despre</a>
       <a href="#procedura">Procedura</a>
@@ -484,7 +491,7 @@
           </select></div>
       </div>
       <div><label for="mesaj">Întrebări / așteptări (opțional)</label><textarea id="mesaj" name="mesaj" rows="3" placeholder="Spune-ne pe scurt ce îți dorești"></textarea></div>
-      <label class="consent"><input type="checkbox" required> Sunt de acord cu prelucrarea datelor conform <a href="#" class="gold">politicii de confidențialitate</a> (GDPR).</label>
+      <label class="consent"><input type="checkbox" required> <span>Sunt de acord cu prelucrarea datelor conform <a href="#" class="gold">politicii de confidențialitate</a> (GDPR).</span></label>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <button type="submit" class="btn">Trimite solicitarea</button>
         <a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
@@ -506,7 +513,7 @@
   <div class="wrap">
     <div class="txt"><b>Dr. Alin Bortolini</b> · Rinoplastie București · de la 30.600 RON</div>
     <div class="acts">
-      <a href="#programare" class="btn">Programează consultația</a>
+      <a href="#programare" class="btn"><span class="d-full">Programează consultația</span><span class="d-short">Programează</span></a>
       <a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
     </div>
   </div>
@@ -530,10 +537,11 @@
 
 <script>
   document.getElementById('year').textContent=new Date().getFullYear();
-  var hdr=document.getElementById('hdr'), sticky=document.getElementById('stickyCta');
+  var hdr=document.getElementById('hdr'), sticky=document.getElementById('stickyCta'), prog=document.getElementById('programare');
   window.addEventListener('scroll',function(){
     hdr.classList.toggle('scrolled',window.scrollY>40);
-    sticky.classList.toggle('show',window.scrollY>700);
+    var nearForm=prog.getBoundingClientRect().top < window.innerHeight*0.85;
+    sticky.classList.toggle('show', window.scrollY>700 && !nearForm);
   });
   document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
   document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));

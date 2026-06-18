@@ -184,6 +184,22 @@
   .gdpr{display:flex;gap:8px;align-items:center;font-size:.76rem;color:#8c8e95}
   .form-msg{display:none;font-size:.9rem;color:var(--gold);padding-top:6px}
 
+  /* contact CTA (fara formular) */
+  .contact-cta{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:780px;margin:0 auto 30px}
+  .cta-card{display:flex;align-items:center;gap:18px;padding:24px 26px;border-radius:14px;border:1px solid var(--line-dark);background:var(--black-2);transition:.25s}
+  .cta-card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.35)}
+  .cta-card.wa{background:linear-gradient(135deg,#1ea952,#25D366);border-color:transparent}
+  .cta-card.tel{border-color:var(--gold-deep)}
+  .cta-card .cta-ic{flex:none;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+  .cta-card.wa .cta-ic{background:rgba(255,255,255,.2);color:#fff}
+  .cta-card.tel .cta-ic{background:rgba(198,163,93,.14);color:var(--gold);border:1px solid var(--gold-deep)}
+  .cta-card .cta-tx b{display:block;font-size:1.2rem;font-family:'Playfair Display',serif;color:#fff}
+  .cta-card .cta-tx small{font-size:.84rem}
+  .cta-card.wa .cta-tx small{color:rgba(255,255,255,.85)}
+  .cta-card.tel .cta-tx small{color:#9a9ca3}
+  .contact-meta{text-align:center;color:#9a9ca3;font-size:.95rem;line-height:1.7}
+  .contact-meta a{color:var(--gold)}
+
   .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(11,11,12,.96);backdrop-filter:blur(8px);border-top:1px solid var(--gold-deep);transform:translateY(110%);transition:.35s;padding:12px 0}
   .sticky-cta.show{transform:translateY(0)}
   .sticky-cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -215,6 +231,7 @@
     .section{padding:64px 0}
     .stats div{margin-bottom:10px}
     .frow{grid-template-columns:1fr}
+    .contact-cta{grid-template-columns:1fr}
     .trust .wrap{gap:22px}.trust .sep{display:none}
     .sticky-cta{padding:10px 0}
     .sticky-cta .txt{display:none}.sticky-cta .wrap{justify-content:center;gap:10px}
@@ -245,7 +262,7 @@
   <div class="wrap nav">
     <a href="#" class="logo"><img class="logo-img" src="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr-Bortolini-Logo-ai-3.svg" referrerpolicy="no-referrer" alt="Dr. Bortolini"><b>Dr. Bortolini</b></a>
     <nav class="nav-links" id="navLinks">
-      <a href="#despre">Despre</a>
+      <a href="#medic">Despre</a>
       <a href="#procedura">Procedura</a>
       <a href="#galerie">Galerie</a>
       <a href="#pret">Preț</a>
@@ -424,19 +441,20 @@
   </div>
 </section>
 
-<section class="section dark">
+<section class="section dark" id="medic">
   <div class="wrap doc">
     <div class="ph r34 reveal"><img src="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr.-Alin-Bortolini-Beperfect-2025-10-17-at-15.49.10.jpeg" referrerpolicy="no-referrer" loading="lazy" alt="Dr. Alin Bortolini"></div>
     <div class="reveal">
-      <span class="eyebrow">Chirurgul tău</span>
-      <h2>Dr. Bortolini Alin</h2>
-      <p class="lead" style="margin:8px 0 0;color:var(--gold)">Medic specialist chirurgie plastică și estetică</p>
-      <p class="doc-quote">Dr. Bortolini consideră rinoplastia una dintre cele mai transformatoare intervenții chirurgicale, cu un impact semnificativ atât pe plan estetic, cât și psihologic.</p>
+      <span class="eyebrow">Despre medic</span>
+      <h2>Cine este Dr. Bortolini</h2>
+      <p class="lead" style="margin:8px 0 18px;color:var(--gold)">Medic specialist chirurgie plastică, estetică și microchirurgie reconstructivă</p>
+      <p class="note" style="margin-bottom:12px">Dr. Alin Bogdan Bortolini este absolvent al Facultății de Medicină UMF „Carol Davila" București, intrat cu nota 9,70 și bursier de merit în fiecare an. A ales chirurgia plastică din pasiune pentru frumos, cu rezultate pe măsura efortului depus.</p>
+      <p class="note" style="margin-bottom:12px">S-a perfecționat în centre de prestigiu din București: Spitalul Universitar de Urgență, Spitalul Universitar de Urgență Militar Central „Carol Davila" și Spitalul Clinic de Chirurgie Plastică Reconstructivă și Arsuri. A urmat stagii internaționale în Brazilia (Rio de Janeiro, Taubaté) și Italia (Ospedale Vittorio Emanuele, Catania).</p>
+      <p class="doc-quote">Am ales să nu fac compromisuri nici la calitatea materialelor, nici a aparaturii și nici în privința educației mele continue. Asta se vede în rezultate.</p>
       <ul class="clist">
-        <li>Absolvent UMF Carol Davila București</li>
-        <li>Perfecționare: Spitalul Universitar de Urgență, Spitalul Militar Central</li>
+        <li>Membru al Colegiului Medicilor și ACPR, ISAPS, ASPS, The Aesthetic Society</li>
         <li>Stagii internaționale în Brazilia și Italia</li>
-        <li>Membru ACPR, ISAPS, ASPS, The Aesthetic Society</li>
+        <li>Educație continuă, congrese și cursuri de specialitate</li>
         <li>Peste 2000 de intervenții realizate</li>
       </ul>
     </div>
@@ -458,47 +476,26 @@
 </section>
 
 <section class="section dark" id="programare">
-  <div class="wrap contact">
-    <div class="reveal">
+  <div class="wrap">
+    <div class="section-head reveal">
       <span class="eyebrow">Programări</span>
       <h2>Programează consultația</h2>
-      <p class="lead" style="margin-top:14px">Completează formularul sau contactează-ne direct. Consultația este primul pas pentru un plan personalizat.</p>
-      <ul class="contact-list">
-        <li><span class="ic">☎</span><div><small>Telefon / WhatsApp</small><a href="tel:0767373328">0767 373 328</a></div></li>
-        <li><span class="ic">✉</span><div><small>Email</small><a href="mailto:drbortolini@beperfect.ro">drbortolini@beperfect.ro</a></div></li>
-        <li><span class="ic">⌖</span><div><small>Adresă</small>Str. Teodosie Rudeanu 12-14, Icon Residence, sector 1, București</div></li>
-      </ul>
-      <p class="note" style="margin-top:18px">Clinica își rezervă dreptul de a selecta pacienții.</p>
+      <p class="lead" style="margin:14px auto 0">Scrie-ne pe WhatsApp sau sună direct. Răspundem rapid și stabilim împreună o dată pentru consultație.</p>
     </div>
-    <form id="bookForm" onsubmit="return handleSubmit(event)" class="reveal">
-      <div><label for="nume">Nume și prenume</label><input id="nume" name="nume" placeholder="Numele tău" required></div>
-      <div class="frow">
-        <div><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" placeholder="07xx xxx xxx" required></div>
-        <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="email@exemplu.ro" required></div>
-      </div>
-      <div class="frow">
-        <div><label for="tip">Tip consultație</label>
-          <select id="tip" name="tip">
-            <option>Rinoplastie estetică</option>
-            <option>Rinoplastie funcțională / sept deviat</option>
-            <option>Septorinoplastie</option>
-            <option>Rinocorecție cu acid hialuronic</option>
-            <option>Nu sunt sigur(ă), vreau o evaluare</option>
-          </select></div>
-        <div><label for="interval">Preferință interval</label>
-          <select id="interval" name="interval">
-            <option>Dimineața</option><option>După-amiaza</option><option>Seara</option><option>Weekend</option>
-          </select></div>
-      </div>
-      <div><label for="mesaj">Întrebări / așteptări (opțional)</label><textarea id="mesaj" name="mesaj" rows="3" placeholder="Spune-ne pe scurt ce îți dorești"></textarea></div>
-      <label class="consent"><input type="checkbox" required> <span>Sunt de acord cu prelucrarea datelor conform <a href="#" class="gold">politicii de confidențialitate</a> (GDPR).</span></label>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <button type="submit" class="btn">Trimite solicitarea</button>
-        <a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
-      </div>
-      <div class="gdpr">🔒 Datele tale sunt confidențiale, folosite exclusiv pentru programare. Fără spam.</div>
-      <p class="form-msg" id="formMsg">Mulțumim. Solicitarea a fost pregătită, te contactăm în cel mai scurt timp.</p>
-    </form>
+    <div class="contact-cta reveal">
+      <a href="https://wa.me/40767373328?text=Bună%20ziua%2C%20vreau%20o%20consultație%20pentru%20rinoplastie" target="_blank" rel="noopener" class="cta-card wa">
+        <span class="cta-ic">✆</span>
+        <span class="cta-tx"><b>Scrie pe WhatsApp</b><small>Răspuns rapid, în timpul programului</small></span>
+      </a>
+      <a href="tel:0767373328" class="cta-card tel">
+        <span class="cta-ic">☎</span>
+        <span class="cta-tx"><b>0767 373 328</b><small>Sună acum</small></span>
+      </a>
+    </div>
+    <div class="contact-meta reveal">
+      <span class="stars" style="color:var(--gold);letter-spacing:2px">★★★★★</span> <b style="color:#fff">4,8</b> pe Google · 296 recenzii<br>
+      <span style="display:inline-block;margin-top:10px">Str. Teodosie Rudeanu 12-14, Icon Residence, sector 1, București · <a href="mailto:drbortolini@beperfect.ro">drbortolini@beperfect.ro</a></span>
+    </div>
   </div>
 </section>
 

@@ -119,6 +119,24 @@
   .timeline span{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:30px;color:var(--ink)}
   .timeline .arrow{color:var(--gold);border:none;background:none;padding:0 2px}
 
+  /* recuperare premium */
+  .rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:50px}
+  .rec-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px;box-shadow:0 16px 44px rgba(168,133,74,.1);transition:.3s}
+  .rec-card:hover{transform:translateY(-4px);box-shadow:0 22px 56px rgba(168,133,74,.16)}
+  .rec-card h3{font-size:1.25rem;color:var(--ink);margin-bottom:14px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .rec-list{list-style:none}
+  .rec-list li{display:flex;gap:14px;align-items:center;padding:13px 0;color:var(--ink);font-weight:400;font-size:.98rem}
+  .rec-list li+li{border-top:1px solid #efe7d8}
+  .rec-list .ico{flex:none;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700}
+  .rec-list .ico.ok{background:rgba(198,163,93,.14);color:var(--gold-deep);border:1px solid rgba(198,163,93,.5)}
+  .rec-list .ico.no{background:rgba(177,85,69,.08);color:#b15545;border:1px solid rgba(177,85,69,.45)}
+  .rec-tl-wrap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 30px;box-shadow:0 16px 44px rgba(168,133,74,.08)}
+  .rtl{position:relative;display:flex;justify-content:space-between;gap:8px}
+  .rtl::before{content:"";position:absolute;top:7px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .rtl .node{position:relative;text-align:center;flex:1;min-width:78px}
+  .rtl .dot{width:16px;height:16px;border-radius:50%;background:var(--gold);margin:0 auto 14px;box-shadow:0 0 0 5px rgba(198,163,93,.18)}
+  .rtl .node small{display:block;color:var(--muted);font-size:.84rem;font-weight:500}
+
   .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
   .case{background:var(--black-2);border:1px solid var(--line-dark);border-radius:12px;overflow:hidden;transition:.3s}
   .case:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(0,0,0,.4)}
@@ -194,7 +212,23 @@
     .frow{grid-template-columns:1fr}
     .trust .wrap{gap:22px}.trust .sep{display:none}
     .sticky-cta .txt{display:none}.sticky-cta .wrap{justify-content:center}
-    .wa-float{bottom:84px}
+    .sticky-cta .acts{width:100%}.sticky-cta .acts .btn{flex:1;justify-content:center;padding:13px 14px;font-size:.85rem}
+    .wa-float{bottom:84px;width:50px;height:50px}
+    .rec-grid{grid-template-columns:1fr;margin-bottom:34px}
+    .rec-card{padding:26px}
+    .rec-tl-wrap{padding:26px 18px}
+    .rtl{overflow-x:auto;-webkit-overflow-scrolling:touch;gap:14px;padding-bottom:4px}
+    .rtl::before{left:8%;right:8%}
+    .hero-inner{padding-top:108px}
+    .hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
+    .hero-photo img{object-position:center 18%}
+    .case .cap{font-size:.78rem;padding:12px 14px}
+  }
+  @media(max-width:420px){
+    .wrap{padding:0 18px}
+    .stats{font-size:.9rem}
+    .btn{padding:13px 22px}
+    .hero-cta{gap:10px}.hero-cta .btn{flex:1;justify-content:center}
   }
 </style>
 </head>
@@ -216,7 +250,7 @@
 
 <section class="hero">
   <div class="hero-photo">
-    <img src="https://beperfect.ro/wp-content/uploads/2020/02/IMG_4724-1024x1024-1.jpg" referrerpolicy="no-referrer" alt="Rinoplastie Dr. Alin Bortolini">
+    <img src="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr.-Alin-Bortolini-Beperfect-2025-10-17-at-15.49.10.jpeg" referrerpolicy="no-referrer" alt="Dr. Alin Bortolini, chirurg plastician">
   </div>
   <div class="hero-inner">
     <span class="eyebrow">Chirurgie plastică de elită</span>
@@ -307,33 +341,39 @@
   </div>
 </section>
 
-<section class="section light">
+<section class="section light-2" id="recuperare">
   <div class="wrap">
     <div class="section-head reveal"><span class="eyebrow">Recuperarea</span><h2>După operația de rinoplastie</h2></div>
-    <div class="two reveal" style="align-items:flex-start">
-      <div>
-        <h3 class="sub">Recuperare postoperatorie</h3>
-        <ul class="clist">
-          <li>Disconfort minim, gestionabil cu analgezice</li>
-          <li>Vânătăile și umflăturile dispar în aproximativ 2 săptămâni</li>
-          <li>Tratament cu antibiotice 5-7 zile</li>
-          <li>Atela și firele se scot la 10-12 zile</li>
-          <li>Forma finală se stabilizează în 6-12 luni</li>
+    <div class="rec-grid">
+      <div class="rec-card reveal">
+        <h3>Recuperare postoperatorie</h3>
+        <ul class="rec-list">
+          <li><span class="ico ok">✓</span> Disconfort minim, gestionabil cu analgezice</li>
+          <li><span class="ico ok">✓</span> Vânătăile și umflăturile dispar în aproximativ 2 săptămâni</li>
+          <li><span class="ico ok">✓</span> Tratament cu antibiotice 5-7 zile</li>
+          <li><span class="ico ok">✓</span> Atela și firele se scot la 10-12 zile</li>
+          <li><span class="ico ok">✓</span> Forma finală se stabilizează în 6-12 luni</li>
         </ul>
       </div>
-      <div>
-        <h3 class="sub">Recomandări importante</h3>
-        <ul class="clist">
-          <li class="no"><span class="ck">✕</span> Evită suflatul nasului 2-3 săptămâni</li>
-          <li class="no"><span class="ck">✕</span> Evită ochelarii 2 luni (folosește lentile)</li>
-          <li>Activități ușoare după 10-12 zile</li>
-          <li class="no"><span class="ck">✕</span> Sport intens abia după 2 luni</li>
+      <div class="rec-card reveal">
+        <h3>Recomandări importante</h3>
+        <ul class="rec-list">
+          <li><span class="ico no">✕</span> Evită suflatul nasului 2-3 săptămâni</li>
+          <li><span class="ico no">✕</span> Evită ochelarii 2 luni (folosește lentile)</li>
+          <li><span class="ico ok">✓</span> Activități ușoare după 10-12 zile</li>
+          <li><span class="ico no">✕</span> Sport intens abia după 2 luni</li>
         </ul>
       </div>
     </div>
-    <h3 class="sub reveal" style="margin-top:30px">Controale programate</h3>
-    <div class="timeline reveal">
-      <span>2-3 zile</span><span class="arrow">→</span><span>2 săpt. (fire)</span><span class="arrow">→</span><span>3 luni</span><span class="arrow">→</span><span>6 luni</span><span class="arrow">→</span><span>12 luni</span>
+    <div class="rec-tl-wrap reveal">
+      <h3 class="sub" style="text-align:center;color:var(--gold-deep);margin-bottom:26px">Controale programate</h3>
+      <div class="rtl">
+        <div class="node"><div class="dot"></div><small>2-3 zile</small></div>
+        <div class="node"><div class="dot"></div><small>2 săpt. (fire)</small></div>
+        <div class="node"><div class="dot"></div><small>3 luni</small></div>
+        <div class="node"><div class="dot"></div><small>6 luni</small></div>
+        <div class="node"><div class="dot"></div><small>12 luni</small></div>
+      </div>
     </div>
   </div>
 </section>
@@ -498,8 +538,11 @@
   document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
   document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
   document.querySelectorAll('.faq details').forEach(d=>d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.faq details').forEach(o=>{if(o!==d)o.open=false});}));
-  var io=new IntersectionObserver(function(es){es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  function revealInView(){document.querySelectorAll('.reveal:not(.in)').forEach(function(e){var r=e.getBoundingClientRect();if(r.top < window.innerHeight*0.92 && r.bottom > 0)e.classList.add('in');});}
+  window.addEventListener('scroll',revealInView,{passive:true});
+  window.addEventListener('load',revealInView);
+  revealInView();
+  setTimeout(revealInView,400);
   function handleSubmit(e){
     e.preventDefault();var f=e.target;
     var corp="Nume: "+f.nume.value+"%0D%0ATelefon: "+f.tel.value+"%0D%0AEmail: "+f.email.value+"%0D%0ATip: "+f.tip.value+"%0D%0AInterval: "+f.interval.value+"%0D%0AMesaj: "+f.mesaj.value;

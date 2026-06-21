@@ -7,6 +7,8 @@
 <meta name="description" content="Rinoplastie estetică și funcțională în București, realizată de Dr. Alin Bortolini, chirurg plastician cu peste 15 ani experiență și 2000+ intervenții. Programează o consultație.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://beperfect.ro/rinoplastie">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='47' fill='%230b0b0c' stroke='%23c6a35d' stroke-width='3'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='%23c6a35d' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="https://lp.beperfect.ro/wp-content/uploads/2025/10/Dr-Bortolini-Logo-ai-3.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rinoplastie București | Dr. Alin Bortolini">
 <meta property="og:description" content="Rinoplastie estetică și funcțională. Peste 15 ani experiență, 2000+ intervenții.">
@@ -55,6 +57,8 @@
   .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.25s}
   .nav-links a:not(.btn):hover::after{width:100%}
   .menu-btn{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .nav-call{display:none;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold-deep);color:var(--gold);font-size:1.2rem;text-decoration:none}
 
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#0b0b0c;color:#fff;overflow:hidden}
   .hero-photo{position:absolute;right:0;top:0;bottom:0;width:50%;overflow:hidden}
@@ -71,6 +75,14 @@
   .stats div:last-child{border-right:none}
   .stats b{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.35rem;font-weight:600;margin-right:8px}
   .stats span{font-size:.9rem;color:#cfd1d6}
+  .hero-rating{display:inline-flex;align-items:center;gap:8px;color:#cfd1d6;font-size:.92rem;margin:2px 0 30px;text-decoration:none}
+  .hero-rating .s{color:var(--gold);letter-spacing:2px;font-size:.95rem}
+  .hero-rating b{color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600}
+  .hero-rating .rt{color:#aeb2ba}
+  .hero-rating:hover .rt{color:#fff}
+  .scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;color:var(--gold);font-size:1.3rem;width:42px;height:42px;border:1px solid var(--gold-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;opacity:.85;animation:bob 1.8s ease-in-out infinite}
+  .scroll-hint:hover{opacity:1}
+  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
 
   .trust{background:#08080a;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
   .trust .wrap{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;align-items:center}
@@ -245,8 +257,15 @@
     .nav-links{display:none}
     .nav-links.open{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;background:var(--black);padding:22px 26px;gap:18px;border-bottom:1px solid var(--line-dark)}
     .menu-btn{display:block}
+    .nav-call{display:flex}
     .section{padding:64px 0}
-    .stats div{margin-bottom:10px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .stats div{padding-right:0;margin-right:0;margin-bottom:0;border-right:none}
+    .stats b{display:block;font-size:1.25rem;margin-right:0}
+    .stats span{font-size:.74rem}
+    .hero-rating{margin:0 0 22px;font-size:.84rem}
+    .hero-inner{padding-bottom:90px}
+    .scroll-hint{bottom:20px;width:38px;height:38px;font-size:1.15rem}
     .frow{grid-template-columns:1fr}
     .contact-cta{grid-template-columns:1fr}
     .map-wrap{grid-template-columns:1fr}
@@ -289,7 +308,10 @@
       <a href="#pret">Preț</a>
       <a href="#programare" class="btn" style="padding:11px 22px">Consultație</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Meniu">☰</button>
+    <div class="nav-right">
+      <a class="nav-call" href="tel:0767373328" aria-label="Sună acum">☎</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Meniu">☰</button>
+    </div>
   </div>
 </header>
 
@@ -301,6 +323,7 @@
     <span class="eyebrow">Chirurgie plastică de elită</span>
     <h1>Rinoplastie <span class="br gold">București</span></h1>
     <p class="lead">Simte-te încrezător cu <span class="gold">Dr. Alin Bortolini</span>, chirurg plastician cu peste 15 ani experiență și 2000+ intervenții.</p>
+    <a href="#recenzii" class="hero-rating"><span class="s">★★★★★</span> <b>4,8</b> <span class="rt">· 296 recenzii pe Google</span></a>
     <div class="hero-cta">
       <a href="#programare" class="btn">Programează consultația →</a>
       <a href="#galerie" class="btn btn-out">▷ Vezi rezultatele</a>
@@ -311,6 +334,7 @@
       <div><b>98%</b><span>satisfacție</span></div>
     </div>
   </div>
+  <a href="#despre" class="scroll-hint" aria-label="Derulează">↓</a>
 </section>
 
 <div class="trust">
@@ -478,6 +502,7 @@
         <li>Educație continuă, congrese și cursuri de specialitate</li>
         <li>Peste 2000 de intervenții realizate</li>
       </ul>
+      <a href="#programare" class="btn" style="margin-top:22px">Programează consultația →</a>
     </div>
   </div>
 </section>
@@ -506,7 +531,7 @@
         <div class="rev-meta"><span class="rev-av">I</span><div><b>Iulia I.</b><small>Local Guide · Verificat pe Google · acum 3 luni</small></div></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:34px" class="reveal"><a href="https://www.google.com/maps/place/Dr.+Alin+Bortolini+-+BePerfect/@44.4539758,26.0727037,17z/data=!4m6!3m5!1s0x40b1ffa2323cc191:0xf154c5963a3d77e4!8m2!3d44.4539758!4d26.0727037" target="_blank" rel="noopener" class="btn btn-dark">Vezi toate recenziile pe Google</a></div>
+    <div style="text-align:center;margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap" class="reveal"><a href="#programare" class="btn">Programează evaluarea →</a><a href="https://www.google.com/maps/place/Dr.+Alin+Bortolini+-+BePerfect/@44.4539758,26.0727037,17z/data=!4m6!3m5!1s0x40b1ffa2323cc191:0xf154c5963a3d77e4!8m2!3d44.4539758!4d26.0727037" target="_blank" rel="noopener" class="btn btn-dark">Vezi toate recenziile pe Google</a></div>
   </div>
 </section>
 
